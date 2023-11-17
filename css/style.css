@@ -1,0 +1,44 @@
+.parent{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    border: 10px solid black;
+    margin: 150px auto;
+    position: relative;
+} 
+.child{
+    width: 250px;
+    height: 250px;
+    transform: rotate(0deg);
+    transition: all 2s linear;
+}
+/*
+decendent selector
+    element{
+    property:value;}
+    */
+.parent .child1{
+    background-color:green;
+    transform-origin: left top;
+}
+/*combination selector*/
+.parent :hover.child1,.parent :hover.child2,.parent :hover.child3,.parent :hover.child4{
+    transform: rotate(360deg);
+}.parent .child2{
+    background-color: yellow;
+    transform-origin: left bottom;
+}
+.parent .child3{
+    background: purple;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform-origin: right top;
+}
+.parent .child4{
+    background: orange;
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+    transform-origin: right bottom;
+}
